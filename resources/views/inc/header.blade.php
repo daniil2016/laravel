@@ -5,8 +5,8 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Меню</h4>
           <ul class="list-unstyled">
-            <li><a href="/about" class="text-white">О нас</a></li>
-            <li><a href="/contact" class="text-white">Контакты</a></li>
+            <li><a href="{{ route('about') }}" class="text-white">О нас</a></li>
+            <li><a href="{{ route('contact') }}" class="text-white">Контакты</a></li>
           </ul>
         </div>
       </div>
