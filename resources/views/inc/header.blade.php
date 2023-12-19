@@ -7,6 +7,7 @@
           <ul class="list-unstyled">
             <li><a href="{{ route('about') }}" class="text-white">О нас</a></li>
             <li><a href="{{ route('contact') }}" class="text-white">Контакты</a></li>
+            <li><a href="{{ route('contact-data') }}" class="text-white">Сообщения</a></li>
           </ul>
         </div>
       </div>

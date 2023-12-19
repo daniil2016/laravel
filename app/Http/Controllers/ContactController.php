@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
+use App\Models\Users;
 
 
 class ContactController extends Controller
@@ -19,5 +20,23 @@ class ContactController extends Controller
 
         dd($result->input('name'));
         return;
+    }
+
+    public function allData()
+    {
+        // подключаемся к конкретной таблице в бд
+        //$contact = new Users();
+        //dd($contact->all());
+        // можно тоже с амое иначе
+        //dd(Users::all());
+
+        return view('messages', ['data' => Users::all()]);
+
+    }
+
+    public function showMessage($id)
+    {
+        $contact = new Users();
+        return view('one-messages', ['data' => $contact->find($id)]);
     }
 }
